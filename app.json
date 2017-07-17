@@ -1,0 +1,7 @@
+{
+  "name": "Website",
+  "description": "Static Landing Page",
+  "repository": "https://github.com/ExtremeLVL9001-DODO/website",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
