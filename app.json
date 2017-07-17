@@ -1,7 +1,6 @@
 {
-  "name": "Website",
-  "description": "Static Landing Page",
-  "repository": "https://github.com/ExtremeLVL9001-DODO/website",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
+  "name": "Start on Heroku: PHP",
+  "description": "A barebones PHP app that makes use of the Silex web framework",
+  "repository": "https://github.com/heroku/php-getting-started",
+  "addons": []
 }
