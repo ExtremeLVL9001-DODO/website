@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <head>
-<script src="./assets/scripts/scripts.js"></script>   
+<!-- imports -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- original code -->
+<script src="./assets/scripts/jquery-scripts.js" type="text/javascript"></script>
+<script src="./assets/scripts/animation-controls.js" type="text/javascript"></script>
+
+<!-- Stylesheets -->
 <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css">
     
 </head>
 <body>
     <img id = "background" src = "./assets/images/background.jpg">
-    <div id = "menu">
-        <img id = "logo" src="./assets/images/placeholder.png">
-        <div id = "menubuttons">
-            <a href = "./subpage.html">sample link</a>
+    <div id ="siteContents">
+        <div id = "page1" class = "page">
+            <div id = "menu">
+                <div id = "left-buttons">
+                    <div class = "justify">
+                        <a id = "survey-link">Survey</a>
+                        <a href = "./subpage.html">sample link</a>
+                    </div>
+                </div>
+                <img id = "logo" src="./assets/images/sample-logo.png">
+                <div id = "right-buttons">
+                    <div class = "justify">
+                        <a href = "./subpage.html">sample link</a>
+                        <a href = "./subpage.html">sample link</a>
+                    </div>
+                </div>
+            </div>
+            <div id = "center-content">
+                <div id = "scrolling-text">
+                    <div class = "motto" id = "0">
+                        <p>Revolutionize Your Hobbies</p>
+                    </div>
+                    <div class = "motto hidden" id = "1">
+                        <p>Experience Local Classes</p>
+                    </div>
+                    <div class = "motto hidden" id = "2">
+                        <p>Find Your Passion</p>
+                    </div>
+                    <div class = "motto hidden" id = "3">
+                        <p>You Want It? We've Got It</p>
+                    </div>
+                    <div class = "motto hidden" id = "4">
+                        <p>Yolo Right?</p>
+                    </div>
+                    <div class = "motto hidden" id = "5">
+                        <p>Volunteer As Tribute!</p>
+                    </div>
+                    <div class = "motto hidden" id = "6">
+                        <p>Find Hot Single Classes Near You!</p>
+                    </div>
+                    <div class = "motto hidden" id = "7">
+                        <p>Take The Red Pill Neo!</p>
+                    </div>
+                    <div class = "motto hidden" id = "8">
+                        <p>Don't Worry, We Won't Bite</p>
+                    </div>
+                    <div class = "motto hidden" id = "9">
+                        <p>Just Keep Trying Till You Run Out of Cake</p>
+                    </div>
+                    <div class = "motto hidden" id = "10">
+                        <p>Are YOU Bad enough to Rescue the President?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = page2 class = "page">
+            <p id = "survey-header">Please take this survey: </p>
+            <iframe id = "survey" src="https://www.surveymonkey.com/r/KQR5CVH">https://www.surveymonkey.com/r/KQR5CVH</iframe>
         </div>
     </div>
-    
     
 </body>

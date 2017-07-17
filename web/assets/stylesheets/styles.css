@@ -1,18 +1,148 @@
+
+
+/* reusable div classes*/
+.page{
+    height: 99vh;
+}
+.justify{
+    display:flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+/* Background and Black Overlay */
 #background{
+    width:auto;
+    height:auto;
+    min-height: 100%;
+    min-width:100%;
     position:fixed;
+    top:-30px;
+    left:-30px;
     z-index: -1;
-    -webkit-filter:brightness(40%);
+    -webkit-filter:brightness(80%)blur(0.2vw);
+    filter:brightness(40%)blur(0.2vw);
+}
+#siteContents{
+    margin-left: 10vw;
+    width:80vw;
+    min-height:99vh;
+    position:absolute;
+    background-color: rgba(0,0,0,0.65); /* 0.5 => opacity */
+}
+
+/* Menu styles */
+@keyframes buttonLight{
+    from {color:grey;}
+    to {color: red;}
+}
+@keyframes buttonUnLight{
+    to {color:grey;}
+    from {color: red;}
 }
 #logo{
-    margin:auto;
-    display: block;
+    width:18%;
+    height:auto;
+    display:inline-block;
+    position:relative;
+    top:1vw;
 }
-#menubuttons{
+#menu>#left-buttons{
+    display:inline-block;
     text-align: center;
-    margin-top: 5vw;
+    margin-top: 4vw;
+    margin-left:5%;
+    width:35%;
 }
-#menubuttons>a{
+#menu>#right-buttons{
+    display: inline-block;
+    text-align: center;
+    margin-top: 4vw;
+    margin-left:5%;
+    width:35%;
+    position: absolute;
+    left:54.5%;
+}
+#left-buttons>div>a,#right-buttons>div>a{
+    text-align: center;
+    font-size: calc(8px + 0.6vw);
     text-decoration:none;
-    color:white;
+    color:grey;
     font-family: "Segoe UI",Arial,sans-serif;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1vw;
+    
+    padding-bottom: 0.25vw;
+    padding-left:0.25vw;
+    padding-right: 0.25vw;
+}
+#left-buttons>div>a:hover,#right-buttons>div>a:hover{
+    animation-name: buttonLight;
+    animation-duration: 0.3s;
+    color: red;
+}
+#left-buttons>div>a:not(:hover),#right-buttons>div>a:not(:hover){
+    animation-name: buttonUnLight;
+    animation-duration: 1s;
+}
+
+/* page 1 content */
+@keyframes textOut{
+    from {transform:none;}
+    to {transform: rotateX(90deg);}
+}
+@keyframes textIn{
+    to {transform: none;}
+    from {transform: rotateX(-90deg);}
+}
+.motto>p{
+    text-align: center;
+    color:white;
+    font-size: 5vw;
+    text-decoration:none;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.motto{
+    position:absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+
+.motto.hidden{
+    transform: rotateX(90deg)
+}
+
+.motto.leaving{
+    animation-name: textOut;
+    animation-duration: 0.3s;
+    transform: rotateX(90deg)
+}
+
+.motto.entering{
+    animation-name: textIn;
+    animation-duration: 0.3s;
+    transform:none;
+}
+
+#scrolling-text{
+    margin-top:30vh;
+    width:100%;
+}
+
+/* page 2 content */
+#survey-header{
+    text-align: center;
+    font-size: calc(20px + 0.7vw);
+    text-decoration:none;
+    color:grey;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+#survey{
+    width:99.5%;
+    height:87%;
+    filter:opacity(0.7);
 }
