@@ -28,7 +28,7 @@
     width:80vw;
     min-height:99vh;
     position:absolute;
-    background-color: rgba(0,0,0,0.65); /* 0.5 => opacity */
+    background-color:rgba(0,0,0,0.65); /* 0.5 => opacity */
 }
 
 /* Menu styles */
@@ -80,7 +80,7 @@
 }
 #left-buttons>div>a:hover,#right-buttons>div>a:hover{
     animation-name: buttonLight;
-    animation-duration: 0.3s;
+    animation-duration: 0.2s;
     color: red;
 }
 #left-buttons>div>a:not(:hover),#right-buttons>div>a:not(:hover){
@@ -94,15 +94,8 @@
     to {transform: rotateX(90deg);}
 }
 @keyframes textIn{
-    to {transform: none;}
-    from {transform: rotateX(-90deg);}
-}
-.motto>p{
-    text-align: center;
-    color:white;
-    font-size: 5vw;
-    text-decoration:none;
-    font-family: "Segoe UI",Arial,sans-serif;
+    to {transform: rotateX(0deg);}
+    from {transform: rotateX(90deg);}
 }
 
 .motto{
@@ -110,6 +103,12 @@
     left:0;
     right:0;
     margin:0 auto;
+    
+    text-align: center;
+    color:white;
+    font-size: 5vw;
+    text-decoration:none;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 
 .motto.hidden{
@@ -138,11 +137,67 @@
     text-align: center;
     font-size: calc(20px + 0.7vw);
     text-decoration:none;
-    color:grey;
+    color:white;
     font-family: "Segoe UI",Arial,sans-serif;
 }
 #survey{
     width:99.5%;
     height:87%;
     filter:opacity(0.7);
+}
+/* footer content */
+#footer{
+    margin-top: 3vh;
+    bottom:0px;
+}
+#contact-info{
+    width:100%;
+    text-align: center;
+    padding-bottom: 1vh;
+}
+.fa{
+    -webkit-filter: invert(100%); /* Safari */
+    filter: invert(100%);
+    height: 19px;
+    padding-top: 5px;
+    width: 20px;
+    border-color:black;
+    border-radius: 50%;
+    margin:0.7vw;
+    
+}
+@keyframes FA-buttonLight{
+    from {color:black;}
+    to {color: cyan;}
+    from {border-color:black;}
+    to {border-color: cyan;}
+}
+@keyframes FA-buttonUnLight{
+    to {color:black;}
+    from {color: cyan;}
+    to {border-color:black;}
+    from {border-color: cyan;}
+    
+}
+.fa:hover{
+    animation-name: FA-buttonLight;
+    animation-duration: 0.2s;
+    color: cyan;
+    border-color: cyan;
+    
+}
+.fa:not(:hover){
+    animation-name: FA-buttonUnLight;
+    animation-duration: 0.2s;
+}
+
+#CC-license{
+    font-size:calc(8px + 0.5vw);
+    text-decoration: none;
+    color:grey;
+    text-align: center;
+}
+#CC-license>a{
+    text-decoration: none;
+    color:grey;
 }
