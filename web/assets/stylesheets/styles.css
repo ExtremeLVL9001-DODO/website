@@ -49,41 +49,41 @@
 }
 #menu>#left-buttons{
     display:inline-block;
-    text-align: center;
+    text-align: right;
     margin-top: 4vw;
     margin-left:5%;
     width:35%;
 }
 #menu>#right-buttons{
     display: inline-block;
-    text-align: center;
+    text-align: left;
     margin-top: 4vw;
     margin-left:5%;
     width:35%;
     position: absolute;
     left:54.5%;
 }
-#left-buttons>div>a,#right-buttons>div>a{
-    text-align: center;
+#left-buttons>a,#right-buttons>a{
+    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+    
     font-size: calc(8px + 0.6vw);
+    font-weight: 800;
     text-decoration:none;
     color:grey;
     font-family: "Segoe UI",Arial,sans-serif;
     
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 1vw;
     
     padding-bottom: 0.25vw;
     padding-left:0.25vw;
     padding-right: 0.25vw;
 }
-#left-buttons>div>a:hover,#right-buttons>div>a:hover{
+#left-buttons>a:hover,#right-buttons>a:hover{
     animation-name: buttonLight;
     animation-duration: 0.2s;
     color: red;
 }
-#left-buttons>div>a:not(:hover),#right-buttons>div>a:not(:hover){
+#left-buttons>a:not(:hover),#right-buttons>a:not(:hover){
     animation-name: buttonUnLight;
     animation-duration: 1s;
 }
@@ -98,10 +98,11 @@
     from {transform: rotateX(90deg);}
 }
 
+#page1{
+    height:150vh;
+}
+
 .motto{
-    position:absolute;
-    left:0;
-    right:0;
     margin:0 auto;
     
     text-align: center;
@@ -130,6 +131,11 @@
 #scrolling-text{
     margin-top:30vh;
     width:100%;
+}
+
+#signup{
+    text-align: center;
+    margin-top:50%;
 }
 
 /* page 2 content */
