@@ -26,20 +26,28 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function cycleIn(node){
+    node.classList.remove("entering");
+    node.classList.add("leaving");
+}
+
+function cycleOut(node){
+    node.classList.remove("leaving");
+    node.classList.add("entering");
+}
+
 async function cycleMottos(){
     var index = 0;
     while(true){
-        displayArea.classList.remove("entering");
-        displayArea.classList.add("leaving");
+        cycleIn(displayArea);
         index += 1;
         if (index == Mottolist.length){
             index = 0;
         }
         await sleep(500);
         displayArea.innerHTML = Mottolist[index];
-        displayArea.classList.remove("leaving");
-        displayArea.classList.add("entering");
-        await sleep(5000);
+        cycleOut(displayArea)
+        await sleep(5000);;
     }
 };
 
