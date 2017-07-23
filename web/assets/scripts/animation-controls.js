@@ -5,15 +5,10 @@
 var displayArea;
 var Mottolist = [   `Experience Local Classes`,
                     `Find Your Passion`,
-                    `You Want It? We've Got It`,
-                    `Yolo Right?`,
-                    'Volunteer As Tribute!',
-                    `Find Hot Single Classes Near You!`,
-                    `Take The Red Pill Neo!`,
-                    `Don't Worry, We Won't Bite`,
-                    `Just Keep Trying Till You Run Out of Cake`,
-                    `Are YOU Bad enough to Rescue the President?`,
-                    `Revolutionize Your Hobbies`
+                    'Make New Friends',
+                    `Find Fun Classes Near You!`,
+                    `Revolutionize Your Hobbies`,
+                    'Make $ Sharing your Passion'
                     ];
 var SignupMsg = "Thank You For Helping Us";
 
