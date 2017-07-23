@@ -1,6 +1,11 @@
 
 
 /* reusable div classes*/
+.text{
+    color:white;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
 .page{
     height: 99vh;
 }
@@ -207,6 +212,39 @@
     outline-width: 0;
 }
 
+#errorOutput{
+    font-size:calc(10px + 0.5vw);
+}
+
+.errorIn{
+    animation-name: textIn;
+    animation-duration: 0.3s;
+    transform:none;
+}
+
+.errorOut{
+    animation-name: textOut;
+    animation-duration: 0.2s;
+    transform: rotateX(90deg)
+}
+
+.formOut{
+    animation-name: textOut;
+    animation-duration: 1s;
+    transform: rotateX(90deg)
+}
+.formIn{
+    animation-name: textIn;
+    animation-duration: 1s;
+    transform:none;
+}
+.formText{
+    text-align: center;
+    font-size: calc(20px + 0.7vw);
+    text-decoration:none;
+    color:white;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
 
 /* page 2 content */
 #survey-header{
