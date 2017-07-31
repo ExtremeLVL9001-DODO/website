@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 
+Written By Albert Liu
+albert6liu@gmail.com
+-->
+<head>
+{% load static %}
+<!-- script imports -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- stylesheep imports -->
+<link rel="stylesheet" href="{% static 'homepage/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<!-- Django imports -->
+<script>
+    var Mottolist = [{% for motto in mottos %}'{{ motto.text }}',{% endfor %}];
+    
+</script>
+
+<!-- original scripts -->
+<script src="{% static 'homepage/scripts/jquery-scripts.js' %}" type="text/javascript"></script>
+<script src="{% static 'homepage/scripts/animation-controls.js' %}" type="text/javascript"></script>
+<script src="{% static 'homepage/scripts/google-sheets.js' %}" type="text/javascript"></script>
+<script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/stylesheets/styles.css' %}">
+    
+</head>
+<body>
+    <img id = "background" src = "{% static 'homepage/images/background.jpeg' %}">
+    <div id ="siteContents">
+        <div id = "page1" class = "page">
+            <div id = "menu">
+                <div id = "left-buttons">
+                        <a id = "survey-link">SURVEY</a>
+                        <a href = "/subpage">SAMPLE LINK</a>
+                </div>
+                <img id = "logo" src="{% static 'homepage/images/sample-logo.png' %}">
+                <div id = "right-buttons">
+                        <a href = "/subpage">SAMPLE LINK</a>
+                        <a href = "/subpage">SAMPLE LINK</a>
+                </div>
+            </div>
+            <div id = "center-content">
+                <div id = "scrolling-text">
+                    <div class = "motto entering" id = "changing-motto">
+                        Revolutionize Your Hobbies
+                    </div>
+                </div>
+            </div>
+            <form id = "signup" action="javascript: postContactToGoogle()">
+                <input id = "first-name" type="text" name="first-name" placeholder = "First Name"/>
+                <input id = "last-name" type="text" name="last-name" placeholder = "Last Name"/>
+                <input id = "email" type="text" name="email" placeholder = "Email"/>
+                <button id="send" type="submit">
+                        Send
+                    </button>
+            </form>
+        </div>
+        <div id = page2 class = "page">
+            <p id = "survey-header">Please take this survey: </p>
+            <iframe id = "survey" src="https://www.surveymonkey.com/r/KQR5CVH">https://www.surveymonkey.com/r/KQR5CVH</iframe>
+        </div>
+        
+        <div id ="footer">
+            <div id = "contact-info">
+                <i class = "fa fa-facebook fa-fw fa-border" ></i>
+                <i class = "fa fa-twitter fa-fw fa-border" ></i>
+                <i class = "fa fa-envelope-o fa-fw fa-border" ></i>
+                <i class = "fa fa-cc-paypal fa-fw fa-border" ></i>
+            </div>
+            <div id = "CC-license">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />
+                This work is licensed under a 
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+            </div>
+        </div>
+    </div>
+    
+</body>
